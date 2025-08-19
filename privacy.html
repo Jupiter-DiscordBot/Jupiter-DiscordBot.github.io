@@ -1,73 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            max-width: 800px;
-            margin: auto;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        h1 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      color: #111;
+    }
+    h1, h2 {
+      color: #111;
+    }
+    h1 {
+      border-bottom: 3px solid #000;
+      padding-bottom: 10px;
+    }
+
+    /* Data box styling */
+    .data-box {
+      background: #fdfdfd;
+      border: 3px solid #444;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 15px 0;
+      transition: 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    .data-box:hover {
+      border-color: #0056d6;
+      background: #e6f0ff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    .data-box strong {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    /* Tooltip style for explanations */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: help;
+      color: #0056d6;
+      font-weight: bold;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 260px;
+      background-color: #000;
+      color: #fff;
+      text-align: left;
+      border-radius: 6px;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* show above element */
+      left: 50%;
+      margin-left: -130px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+    .tooltip:focus .tooltiptext,
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Accessibility: focus states */
+    .tooltip:focus {
+      outline: 3px solid #0056d6;
+      outline-offset: 3px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
+  <h1>Privacy Policy</h1>
 
-    <p>Welcome to Jupiter. This Privacy Policy explains how we collect, use, and protect your information when you use our Discord bot.</p>
+  <p>
+    Welcome to Jupiter. This Privacy Policy explains how we collect, use, and protect your information when you use our Discord bot. 
+    Hover or focus on the highlighted terms for explanations.
+  </p>
 
-    <h2>1. Information We Collect</h2>
-    <p>When you use the Bot, we collect the following information related to your Jupiter Network profile:</p>
+  <h2>1. Information We Collect</h2>
+
+  <div class="data-box">
+    <strong>🪪 Jupiter Account Data</strong>
+    Basic information needed to identify and secure your account:
     <ul>
-        <li><strong>Level:</strong> Your current level within the Jupiter Network.</li>
-        <li><strong>Discoins:</strong> The amount of Discoins you hold.</li>
-        <li><strong>Friends:</strong> A list of your friends within the Jupiter Network.</li>
-        <li><strong>Avatar URL:</strong> The URL of your avatar associated with your Jupiter Network profile.</li>
+      <li><span class="tooltip" tabindex="0">Username
+        <span class="tooltiptext">Your chosen display name within the Jupiter Network.</span>
+      </span></li>
+      <li><span class="tooltip" tabindex="0">Password (hashed)
+        <span class="tooltiptext">We never store your plain password. Instead, we only store a hashed version for security.</span>
+      </span></li>
     </ul>
+  </div>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>The information we collect is used for the following purposes:</p>
+  <div class="data-box">
+    <strong>🎭 Discord ID</strong>
+    Your unique Discord user ID. 
+    <span class="tooltip" tabindex="0">?
+      <span class="tooltiptext">The Discord ID is a permanent number given by Discord, different from your username.</span>
+    </span>
+  </div>
+
+  <div class="data-box">
+    <strong>🔗 Guildhooks Data</strong>
+    Used for cross-guild communication. 
+    <span class="tooltip" tabindex="0">?
+      <span class="tooltiptext">This allows you to send messages between different servers connected to Jupiter.</span>
+    </span>
+  </div>
+
+  <div class="data-box">
+    <strong>🏦 Jupiter Bank Data</strong>
+    Includes:
     <ul>
-        <li>To provide and enhance the features of the Bot.</li>
-        <li>To display your profile information and Discoins within the Bot.</li>
-        <li>To manage your friend list and display relevant data.</li>
+      <li><span class="tooltip" tabindex="0">Points
+        <span class="tooltiptext">Points are rewards earned by using the bot.</span>
+      </span></li>
+      <li><span class="tooltip" tabindex="0">Jupits
+        <span class="tooltiptext">Jupits are the main virtual currency of Jupiter.</span>
+      </span></li>
+      <li><span class="tooltip" tabindex="0">Transactions
+        <span class="tooltiptext">We keep a record of your transactions so your balance is accurate.</span>
+      </span></li>
     </ul>
+  </div>
 
-    <h2>3. Data Protection</h2>
-    <p>We implement reasonable measures to protect the information we collect from unauthorized access, use, or disclosure. However, please be aware that no security measures are perfect or impenetrable.</p>
+  <h2>2. How We Use Your Information</h2>
+  <p>
+    We use your data to provide features, manage your account, and enhance the Jupiter Network.
+  </p>
 
-    <h2>4. Data Retention</h2>
-    <p>We retain the collected data only for as long as necessary to provide our services and fulfill the purposes outlined in this Privacy Policy. Data is deleted or anonymized when it is no longer needed.</p>
+  <h2>3. Data Sharing</h2>
+  <p>
+    Data may be shared within the <strong>Jupiter Network</strong> via our RPC/API, 
+    but only with <strong>authorized apps or games</strong>. 
+    <span class="tooltip" tabindex="0">?
+      <span class="tooltiptext">For example, if you connect Jupiter with a game that is officially approved, it may use your account or bank data.</span>
+    </span>
+  </p>
 
-    <h2>5. Third-Party Services</h2>
-    <p>We do not share your information with third parties, except where required by law or in connection with the operation of the Bot. We do not use third-party analytics or advertising services.</p>
+  <h2>4. Protection & Retention</h2>
+  <p>
+    We protect your data with security measures and only keep it as long as necessary. 
+    When it is no longer needed, it is deleted or anonymized.
+  </p>
 
-    <h2>6. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically.</p>
-
-    <h2>7. Your Rights</h2>
-    <p>You have the right to access, correct, or delete your personal information. If you have any questions or requests regarding your data, please contact us through the means provided in our Terms of Service.</p>
-
-    <h2>8. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please refer to our Terms of Service for more information.</p>
+  <h2>5. Your Rights</h2>
+  <p>
+    You may request access, correction, or deletion of your data at any time. 
+    Contact details are provided in our Terms of Service.
+  </p>
 
 </body>
 </html>
